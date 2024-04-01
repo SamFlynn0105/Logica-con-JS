@@ -1,0 +1,86 @@
+<meta charset="UTF-8">
+
+<h1>Calculo IMC</h1>
+
+<script type="text/javascript">
+
+function saltolinea()
+{
+  document.write("<br>");
+  document.write("<hr>");  
+}
+
+function imped(cad)
+{
+  document.write(cad);
+  saltolinea();
+}
+
+function CalcIMC(peso, altura)
+{
+  imc = peso/(altura * altura);
+  	
+  return (imc);
+}
+
+nombre = prompt("nombre: ");
+pesoinf = prompt(nombre + " peso: ");
+altinf = prompt(nombre + " altura: ");
+
+imcCalc = CalcIMC(pesoinf, altinf); 
+imped("el prom de IMC informado para " + nombre + " es: " + imcCalc);
+
+if(imcCalc < 18.5)
+{
+ imped("IMC bajo de los recomendado");  
+}
+
+if(imcCalc >=18.5)
+{
+  if(imcCalc < 25)
+  {
+   imped("IMC dentro de lo recomendado"); 
+  }
+}
+
+if(imcCalc >=25)
+{
+  if(imcCalc < 30)
+  {
+  imped("IMC considerado como sobrepeso"); 
+  }
+   
+}
+
+if(imcCalc >= 30)
+{
+ imped("IMC considerado como obesidad");  
+}
+
+/*var imcsam = CalcIMC(71, 1.72);
+var imcfel = CalcIMC(75, 1.73);
+imped("el prom de IMC de sam y felipe es: " + (imcsam+imcfel/2));*/
+
+/*function CalcIMCp(peso1, altura1, nom1, peso2, altura2, nom2)
+{
+  imc1 = peso1/(altura1 * altura1);
+  imc2 = peso2/(altura2 * altura2);
+  imped("el prom de IMC de "+ nom1 +" y" + nom2 + " es: " + (imc1+imc2/2));	
+  //return (imc);
+}*/
+
+//pesosam = 71;
+//alturasam = 1.72;
+//imcsam = pesosam/(alturasam * alturasam);
+//imped("el IMC de sam es: " + imcsam)
+
+/*CalcIMC(71, 1.72, "sam");
+CalcIMC(75, 1.73, "fel");
+CalcIMCp(71, 1.72, "sam", 75, 1.73, "fel");*/
+
+/*pesofel = 75;
+alturafel = 1.73;
+imcfel = CalcIMC(pesofel, alturafel);
+imped("el IMC de fel es: " + imcfel)*/
+
+</script>

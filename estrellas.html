@@ -1,0 +1,33 @@
+<meta charset="UTF-8">
+
+<h1>Estrellas...</h1>
+
+<script type="text/javascript">
+
+function saltolinea()
+{
+  document.write("<br>");
+  document.write("<hr>");  
+}
+
+function imped(cad)
+{
+  document.write(cad);
+}
+
+var i=0, i2=0;
+var taml = parseInt(prompt("comienzo: "));
+var taml2 = parseInt(prompt("lineas: "));
+
+for(i2=0;i2<taml2;i2++)
+ { 
+  for(i=0;i<taml;i++)
+  {
+    imped("* ");
+  }
+  document.write("<br>");
+  taml=taml-1;
+ }
+ imped("FIN");
+
+</script>

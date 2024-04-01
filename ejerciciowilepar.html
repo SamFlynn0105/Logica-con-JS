@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+
+<h1>Adivinacion...</h1>
+
+<script type="text/javascript">
+
+function saltolinea()
+{
+  document.write("<br>");
+  document.write("<hr>");  
+}
+
+function imped(cad)
+{
+  document.write(cad);
+  saltolinea();
+}
+
+var lim=100;
+var conteo=2;
+
+while(conteo <= lim)
+{
+  imped("numero par: " + conteo);
+  conteo+=2;
+}
+
+</script>

@@ -1,0 +1,59 @@
+<meta charset="UTF-8">
+
+<h1>Adivinacion...</h1>
+
+<script type="text/javascript">
+
+function saltolinea()
+{
+  document.write("<br>");
+  document.write("<hr>");  
+}
+
+function imped(cad)
+{
+  document.write(cad);
+  saltolinea();
+}
+
+function sorteo(n)
+{
+ return Math.round((Math.random() * 10));  
+}
+
+var numpen =sorteo(10);
+var intentos = 3;
+var contador = 1;
+
+
+while(contador <= intentos)
+{
+var numlan = parseInt(prompt("ingresa numero entre 0-10"));
+
+//alert("numero ingresado: " + numlan);
+if(numpen == numlan)
+{
+ alert("acerto, ingreso el num: " + numlan + " ,numero pensado: " + numpen + " intento: " + contador);
+ break;
+}
+else
+{
+  if(numlan > numpen)
+  {
+   alert("error, ingreso el num: " + numlan + " ,numero pensado menor: " + numpen + " intento: " + contador);
+  } 
+  else
+  {
+   alert("error, ingreso el num: " + numlan + " ,numero pensado mayor: " + numpen + " intento: " + contador);
+  } 
+ //alert("error, el numero es: " + numpen);
+}
+contador++;
+numpen =sorteo(10);
+}
+
+if (numpen == numlan)
+{
+  imped("usted acertó, en el intento " + contador + " el número pensado era " + numpen);
+}
+</script>

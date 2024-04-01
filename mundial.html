@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+
+<h1>Adivinacion...</h1>
+
+<script type="text/javascript">
+
+function saltolinea()
+{
+  document.write("<br>");
+  document.write("<hr>");  
+}
+
+function imped(cad)
+{
+  document.write(cad);
+  saltolinea();
+}
+
+var aniomund = 1930;
+var limit = parseInt(prompt("ingrese año limite para calculo: "));
+
+imped("hubo mundial de la fifa en el año " + aniomund);
+
+while(aniomund <= limit)
+{
+ imped("hubo mundial de la fifa en el año " + aniomund);
+ aniomund = aniomund + 4;
+}
+document.write("<br>fin.");
+
+</script>

@@ -1,0 +1,40 @@
+<meta charset="UTF-8">
+
+<h1>calculo puntos equipo futbol...</h1>
+
+<script type="text/javascript">
+
+function saltolinea()
+{
+  document.write("<br>");
+  document.write("<hr>");  
+}
+
+function imped(cad)
+{
+  document.write(cad);
+  saltolinea();
+}
+
+var victorias = parseInt(prompt("cantidad victorias: "));
+var empates = parseInt(prompt("cantidad empates: "));
+
+
+var puntos_total = victorias * 3 + empates;
+
+imped("el total de puntos: " + puntos_total);
+
+if(puntos_total>28)
+{
+ imped("el equipo esta mejor que el año pasado"); 
+}
+if(puntos_total<28)
+{
+ imped("el equipo esta peor que el año pasado");  
+}  
+if(puntos_total==28)
+{
+ imped("el equipo esta igual que el año pasado");
+}
+
+</script>

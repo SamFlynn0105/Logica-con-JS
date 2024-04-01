@@ -1,0 +1,35 @@
+<meta charset="UTF-8">
+
+<h1>calcula media de edades de una familia...</h1>
+
+<script type="text/javascript">
+
+function saltolinea()
+{
+  document.write("<br>");
+  document.write("<hr>");  
+}
+
+function imped(cad)
+{
+  document.write(cad);
+  saltolinea();
+}
+
+
+var nummiem = parseInt(prompt("cantidad miembros fam: "));
+var contador = 1;
+var totalEdades = 0;
+
+while(contador <= nummiem)
+{
+ var edad = parseInt(prompt("edad del familiar: "));
+ totalEdades = totalEdades+edad;
+ contador++;
+}
+
+var mediaEdades = totalEdades/nummiem;
+imped("media edades fam: " + mediaEdades);
+imped("total de edades es: " + totalEdades);
+
+</script>

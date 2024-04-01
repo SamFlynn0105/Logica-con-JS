@@ -1,0 +1,36 @@
+<meta charset="UTF-8">
+
+<h1>tabla de multiplicar...</h1>
+
+<script type="text/javascript">
+
+function saltolinea()
+{
+  document.write("<br>");
+  document.write("<hr>");  
+}
+
+function imped(cad)
+{
+  document.write(cad);
+  saltolinea();
+}
+
+var multi = parseInt(prompt("tabla: "));
+var veces = parseInt(prompt("veces: "));
+var ini = 1;
+
+while (ini <= veces)
+{
+  imped(multi * ini);
+  ini++;
+}
+
+document.write("FOR<br>");
+
+for(var multi=1;multi<=10;multi++)
+{
+  imped(5*multi);
+}
+
+</script>
